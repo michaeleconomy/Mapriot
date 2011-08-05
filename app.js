@@ -104,6 +104,11 @@ app.get('/home', auth_required, function(req, res) {
   }
 });
 
+app.post('/chat', auth_required, function(req, res) {
+  users.chat(req.session['uid'], req.param('message'))
+  res.send()
+});
+
 app.get('/', function(req, res){
   res.render('index', {authenticated: req.isAuthenticated(), sign_in_url: sign_in_url})
 });

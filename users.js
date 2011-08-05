@@ -29,6 +29,13 @@ exports.add = function(name, uid){
   this.list.push(user)
   this.notify_watchers("add", user)
 }
+
+exports.chat = function(uid, message){
+  this.notify_watchers("chat", {
+      uid: uid
+    , message: message
+  })
+}
 exports.remove = function(uid) {
   var user = this.get_user(uid)
   if (user) {
