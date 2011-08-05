@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #EEE;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  width:700px;
+  margin: auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#main {
+  text-align: left;
+  box-shadow: 10px 10px 5px #888;
+  margin: 20px;
+  background: white;
+  width: 600px;
+  height: 400px;
+}
+
+.player {
+  position: absolute;
+}
+
+
+.speechBubble {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  border: 1px solid #5A8F00;
+  color: #333;
+  background: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.speechBubble::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #5A8F00 transparent;
+  display: block;
+  width: 0;
+}
+.speechBubble::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 40px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: white transparent;
+  display: block;
+  width: 0;
+}

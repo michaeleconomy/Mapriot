@@ -1,0 +1,8 @@
+- title = "test"
+h1 Map Riot
+- if(authenticated)
+  #main
+  form(action="/chat", method="post")
+    input(name="message")
+- else
+  a(href="#{sign_in_url}") Sign in with Facebook to Begin
